@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bbbbbb;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+legend {
+  font-size: 20px;
+}
+
+label {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.itog {
+  font-size: 20px;
+  margin-left: 30px;
+}/*# sourceMappingURL=style.css.map */
