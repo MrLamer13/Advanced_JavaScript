@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" name="form">
+            <fieldset class="fieldset">
+                <legend>Размер гамбургера</legend>
+                <div class="radiobutton">
+                    <input type="radio" name="size" id="small" class="size" value="small" checked>
+                    <label for="small">Маленький (50 рублей, 20 калорий).</label>
+                </div>
+                <div class="radiobutton">
+                    <input type="radio" name="size" id="big" class="size" value="big">
+                    <label for="big">Большой (100 рублей, 40 калорий).</label>
+                </div>
+
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend>Начинка</legend>
+                <div class="radiobutton">
+                    <input type="radio" name="stuffing" id="cheese" class="stuffing" value="cheese" checked>
+                    <label for="cheese">С сыром (+10 рублей, +20 калорий).</label>
+                </div>
+                <div class="radiobutton">
+                    <input type="radio" name="stuffing" id="salad" class="stuffing" value="salad">
+                    <label for="salad">С салатом (+20 рублей, +5 калорий).</label>
+                </div>
+                <div class="radiobutton">
+                    <input type="radio" name="stuffing" id="potatoes" class="stuffing" value="potatoes">
+                    <label for="potatoes">С картофелем (+15 рублей, +10 калорий).</label>
+                </div>
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend>Добавки</legend>
+                <div class="check">
+                    <input type="checkbox" id="seasoning" name="seasoning">
+                    <label for="seasoning">Приправа (+15 рублей, +0 калорий)</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="mayo" name="mayo">
+                    <label for="mayo">Майонез (+20 рублей, +5 калорий).</label>
+                </div>
+            </fieldset>
+
+            <div class="btn-box">
+                <button class="btn" type="button">Расчитать</button>
+                <div class="itog"></div>
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
