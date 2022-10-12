@@ -1,0 +1,307 @@
+.catalog_main
+    display: flex
+    margin-top: 59px
+
+.catalog_main_details
+    width: 243px
+    margin-right: 49px
+    margin-bottom: 18px
+
+.catalog_main_details_summary
+    @include text(14px, 20px, 700, uppercase, 0, #6f6e6e)
+    border-bottom: 1px solid #ebebeb
+    border-left: 5px solid $color_pink
+    padding: 10px
+    display: flex
+    justify-content: space-between
+
+.catalog_main_details_summary::after
+    content: '\25BC'
+    color: #6f6e6e
+
+.catalog_main_details[open]>.catalog_main_details_summary::after
+    content: '\25B2'
+    color: $color_pink
+
+.catalog_main_details_item
+    padding: 10px
+
+.catalog_main_details_item__link
+    display: block
+    @include text(14px, 33px, 400, none, 0, #6f6e6e)
+    transition: color 0.5s
+
+.catalog_main_details_item__link:hover
+    color: $color_pink
+
+.catalog__item_box__header_filter
+    display: flex
+    justify-content: space-between
+
+.catalog__item_box__header_filter_item
+    width: 263px
+    display: flex
+    flex-wrap: wrap
+    @include text(14px, 20px, 400, uppercase, 0, #6f6e6e)
+    border: none
+
+.catalog__item_box__header_filter_legend
+    padding-bottom: 6px
+    font-weight: 700
+
+.catalog__item_box__header_filter_radio_label
+    @include text(14px, 26px, 400, none, 0, #6f6e6e)
+    transition: color 0.5s
+
+.catalog__item_box__header_filter_radio_btn
+    display: inline-block
+    margin-right: 10px
+    padding-top: 6px
+
+.catalog__item_box__header_filter_radio_btn input[type=radio]
+    display: none
+
+/* Checked */
+.catalog__item_box__header_filter_radio_btn input[type=radio]:checked + label
+    color: $color_pink
+
+/* Hover */
+.catalog__item_box__header_filter_radio_btn label:hover
+    color: $color_pink
+
+/* Disabled */
+.catalog__item_box__header_filter_radio_btn input[type=radio]:disabled + label
+    background: #efefef
+    color: #666
+
+.catalog__item_box__header_filter_separator
+    padding: 6px 20px 0 20px
+
+.catalog__item_box__header_filter_checkbox
+    width: 63px
+    padding-top: 6px
+
+.catalog__item_box__header_sort
+    height: 50px
+    background-color: #f3f3f3
+    margin-top: 32px
+    margin-bottom: 48px
+    display: flex
+    align-items: center
+
+.catalog__item_box__header_sort_label
+    background-color: #ffffff
+    border: 1px solid #ebebeb
+    height: 30px
+    @include text(14px, 26px, 400, none, 0, #6f6e6e)
+    margin-left: 10px
+    padding-left: 12px
+    padding-right: 8px
+
+.catalog__item_box__header_sort_select
+    background-color: #ffffff
+    border: 1px solid #ebebeb
+    height: 30px
+    @include text(14px, 1, 400, none, 0, #6f6e6e)
+    margin-left: -1px
+    padding-left: 10px
+
+.catalog__item_box__header_filter_range
+    width: 100%
+
+.item_box__header
+    text-align: center
+    padding-bottom: 60px
+
+.item_box__heading
+    @include text(30px, 1, 700, none, 0.025em, #222222)
+
+.item_box__text
+    @include text(14px, 1, 400, none, 0.025em, #9f9f9f)
+
+.item_box__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.item
+    width: 263px
+    background-color: $color_white
+    margin-bottom: 40px
+    position: relative
+    transition: all 1s
+
+.item_link
+    display: block
+    text-decoration: none
+    padding-bottom: 21px
+
+.item_img
+    width: 100%
+    transition: all 1s
+
+.item:hover
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15)
+
+.item:hover .item_img
+    filter: brightness(30%)
+
+.item_text
+    @include text(13px, 1.2, 400, uppercase, 0, #222222)
+    padding: 15px 0 0 15px
+    &_desc
+        text-transform: none
+
+.item_text_price
+    @include text(16px, 1.2, 700, uppercase, 0, $color_pink)
+    padding: 15px 0 0 15px
+
+.item_add_box
+    position: absolute
+    top: 125px
+    display: none
+    justify-content: center
+    width: 100%
+    pointer-events: none
+
+.item:hover .item_add_box
+    display: flex
+
+.item_add
+    padding: 8px
+    border: 1px solid $color_white
+    @include text(13px, 1.2, 700, none, 0, $color_white)
+    background: none
+    pointer-events: all
+    display: flex
+    align-items: center
+    transition: all 1s
+
+.item_add:hover
+    box-shadow: 0px 0px 10px 0px $color_white
+    border: 1px solid $color_pink
+    color: $color_pink
+
+.item_add_text
+    padding-left: 8px
+
+.item_box__button
+    text-align: center
+    margin: 36px 0 132px 0
+
+.item_box__link
+    padding: 18px 24px
+    background-color: $color_pink
+    @include text(16px, 54px, 700, none, 0.025em, $color_white)
+    transition: all 1s
+
+.item_box__link_fa-arrow-right-long
+    padding-left: 9px
+
+.item_box__link:hover
+    background-color: $color_white
+    border: 1px solid $color_pink
+    color: $color_pink
+
+.item_add_box_flex
+    flex-direction: column
+    align-items: center
+
+.item_add_box_mini_flex
+    display: flex
+    margin-top: 8px
+
+.item_add_box_mini
+    margin: 0 5px
+
+.item_add_mini
+    font-size: 20px
+    padding: 6px 13px
+
+.catalog__item_box_bottom
+    display: flex
+    justify-content: space-between
+    margin-bottom: 110px
+
+.catalog__item_box__link
+    padding: 13px 50px
+    border-radius: 3px
+    background-color: $color_pink
+    @include text(16px, 45px, 700, none, 0.025em, $color_white)
+    border: 1px solid transparent
+    transition: all 1s
+
+.catalog__item_box__link:hover
+    background-color: $color_white
+    border: 1px solid $color_pink
+    color: $color_pink
+
+.offer_mini
+    height: 341px
+    background-color: #222224
+
+.offer_mini_container
+    height: 100%
+
+.offer_mini_content
+    display: flex
+    height: 100%
+
+.offer_mini__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    margin: 0 30px
+
+.offer_mini_article
+    text-align: center
+
+.offer_mini_article__header
+    @include text(20px, 1.2, 700, none, 0.025em, #fbfbfb)
+    padding-top: 32px
+
+.offer_mini_article__text
+    @include text(14px, 23px, 300, none, 0.025em, #fbfbfb)
+    padding-top: 20px
+
+.pagination
+    display: flex
+    padding-left: 0
+    list-style: none
+    border: 1px solid #ebebeb
+
+.page-link
+    position: relative
+    display: block
+    @include text(16px, 26px, 700, none, 0, $color_grey)
+    padding: 9px 9px
+    background-color: $color_white
+    border: 1px solid transparent
+    transition: all 1s
+    &_active
+        z-index: 1
+        color: $color_pink
+        border: 1px solid $color_pink
+
+.page-link:hover
+    z-index: 1
+    color: $color_pink
+    border: 1px solid $color_pink
+
+.page-link:focus
+    z-index: 1
+    color: $color_pink
+    border: 1px solid $color_pink
+
+.page-item:not(:first-child) .page-link
+    margin-left: -1px
+
+.page-item:first-child .page-link
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+
+.page-item:last-child .page-link
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
